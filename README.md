@@ -1,1 +1,0 @@
-# dms-practicals1
