@@ -1,4 +1,7 @@
-
+/*question 4:-For any number n, write a program to list all the
+solution of the equation X1+X2+X3+......+Xn= C ,where C is the constant 
+(c<=10) and X1,X2,X3,....,Xn are non negative  integers ,using brute force strategy
+*/
 
 #include<iostream>
 
