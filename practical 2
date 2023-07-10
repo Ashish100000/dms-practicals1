@@ -1,0 +1,114 @@
+// Question 2:- create a class RELATION ,use Matrix notation to represent a relation 
+// Include member functions ro check if the relation in REFLEXCIVE , SYMMETRIC , ANTI-
+// SYMMETRIC ,TRASITIVE ,. Using these function check wether the given relation is : 
+// Equivalance or Partial Order relation or non
+
+
+
+
+/*
+#include <iostream>
+
+using namespace std;
+
+class RELATION {
+    private:
+        int n;
+        bool **relation;
+
+    public:
+        RELATION(int n) {
+            this->n = n;
+            relation = new bool *[n];
+            for (int i = 0; i < n; i++) {
+                relation[i] = new bool[n];
+                for (int j = 0; j < n; j++) {
+                    relation[i][j] = false;
+                }
+            }
+        }
+
+        ~RELATION() {
+            for (int i = 0; i < n; i++) {
+                delete[] relation[i];
+            }
+            delete[] relation;
+        }
+
+        void set_relation(int i, int j, bool value) {
+            relation[i][j] = value;
+            relation[j][i] = value;
+        }
+
+        bool is_reflexive() {
+            for (int i = 0; i < n; i++) {
+                if (!relation[i][i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        bool is_symmetric() {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (relation[i][j] && !relation[j][i]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        bool is_anti_symmetric() {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (relation[i][j] && relation[j][i] && i != j) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        bool is_transitive() {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    for (int k = 0; k < n; k++) {
+                        if (relation[i][j] && relation[j][k] && !relation[i][k]) {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        bool is_equivalence_relation() {
+            return is_reflexive() && is_symmetric() && is_transitive();
+        }
+
+        bool is_partial_order_relation() {
+            return is_reflexive() && is_transitive();
+        }
+};
+
+int main() {
+    RELATION relation(4);
+    relation.set_relation(0, 0, true);
+    relation.set_relation(0, 1, true);
+    relation.set_relation(1, 0, true);
+    relation.set_relation(1, 1, true);
+    relation.set_relation(2, 2, true);
+    relation.set_relation(3, 3, true);
+
+    cout << "Is the relation reflexive? " << relation.is_reflexive() << endl;
+    cout << "Is the relation symmetric? " << relation.is_symmetric() << endl;
+    cout << "Is the relation anti-symmetric? " << relation.is_anti_symmetric() << endl;
+    cout << "Is the relation transitive? " << relation.is_transitive() << endl;
+    cout << "Is the relation an equivalence relation? " << relation.is_equivalence_relation() << endl;
+    cout << "Is the relation a partial order relation? " << relation.is_partial_order_relation() << endl;
+
+    return 0;
+}
+*/
